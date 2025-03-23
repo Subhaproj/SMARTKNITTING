@@ -31,7 +31,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Setup Python ${{ env.PYTHON_VERSION }}
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: ${{ env.PYTHON_VERSION }}
 
@@ -69,7 +69,6 @@ jobs:
         uses: actions/configure-pages@v5
         
       - name: Deploy to GitHub Pages 🚀
-        if: github.event_name == 'push'
         id: deployment
         uses: actions/deploy-pages@v4.0.5
         with:
