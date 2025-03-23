@@ -60,7 +60,7 @@ jobs:
 
     - name: Flet Build Web
       run: |
-        echo "GITHUB_REPOSITORY: SMARTKNITTING, USER: SMARTKNITTING%/*, PROJECT_BASE_URL: SMARTKNITTING#*/"
+        echo "GITHUB_REPOSITORY: $(GITHUB_REPOSITORY), USER: ${GITHUB_REPOSITORY%/*}, PROJECT_BASE_URL: ${GITHUB_REPOSITORY#*/}"
         flet build web --base-url SMARTKNITTING#*/ --route-url-strategy hash
 
     - name: Upload Artifact
