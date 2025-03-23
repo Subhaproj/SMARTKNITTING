@@ -42,7 +42,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - name: Checkout code
@@ -72,7 +72,7 @@ jobs:
   deploy:
     needs: build  # wait for the "build" job to get done before executing this "deploy" job
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
